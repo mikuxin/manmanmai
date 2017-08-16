@@ -1,0 +1,54 @@
+/* ����ģ���ض��� */
+.mpro-list-item .mitem-info {
+  position: relative;
+}
+.mpro-list-item .mitem-info .mall {
+  line-height: 0.39999rem;
+  height: 0.39999rem;
+}
+.mpro-list-item .mitem-info .comment {
+  float: left;
+  line-height: 0.39999rem;
+  height: 0.39999rem;
+}
+.mpro-list-item .mitem-info .stars {
+  position: absolute;
+  bottom: 0.53332rem;
+  right: 0;
+  width: 2.39994rem;
+  height: 0.479988rem;
+  background: url("../images/star.svg") repeat;
+  background-size: 0.479988rem 0.479988rem;
+}
+/* ----------- S �������� --------------*/
+.product-newcomment .mpro-list-item {
+  float: none;
+  background: #fff;
+}
+.product-newcomment .mpro-list-item a {
+  padding-bottom: 0;
+}
+.product-newcomment .mpingjia {
+  background: #fff;
+  padding: 0.13333rem;
+}
+.product-newcomment .mpingjia .pj-list-item {
+  float: none;
+  padding: 0;
+  padding: 0.39999rem;
+  border-radius: 0.13333rem;
+  background: #f8f8f8;
+  position: relative;
+}
+.product-newcomment .mpingjia .pj-list-item .tit .name {
+  color: #000;
+}
+.product-newcomment .mpingjia .pj-list-item .stars {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 0.26666rem;
+  width: 2.39994rem;
+  height: 0.479988rem;
+  background: url("../images/star.svg") repeat;
+  background-size: 0.479988rem 0.479988rem;
+}

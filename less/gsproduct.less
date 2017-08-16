@@ -1,0 +1,168 @@
+@import "px2rem";
+
+/*----------- S 凑单品主体部分 ------------*/
+// 头部过滤器部分
+.gs-header {
+  background: #fff;
+  position: relative;
+
+  // 过滤器
+  .gs-filter {
+    overflow: hidden;
+    height: 74*@rem;
+    border-bottom: 1px solid #dadada;
+    ul {
+      display: flex;
+    }
+    li {
+      position: relative;
+      flex: 1;
+      height: 74*@rem;
+      > a {
+        display: block;
+        width: 100%;
+        height: 74*@rem;
+        line-height: 74*@rem;
+        text-align: center;
+        font-size: 24*@rem;
+        > i {
+          vertical-align: middle;
+          display: inline-block;
+          height: 40*@rem;
+          width: 40*@rem;
+          background: url("../images/up.svg") no-repeat;
+          -webkit-background-size: 40*@rem;
+          background-size: 40*@rem;
+        }
+      }
+    }
+
+  }
+
+  // 搜索框
+  .gs-search {
+    float: right;
+    border-left: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    width: 92*@rem;
+    height: 74*@rem;
+
+    .icon-search {
+      display: block;
+      margin: 0 auto;
+      height: 74*@rem;
+      width: 74*@rem;
+      background: url("../images/search.svg") no-repeat center;
+      background-size: 40*@rem 40*@rem;
+    }
+  }
+
+  // 各种下拉框
+  .popbox {
+    position: absolute;
+    top: 74*@rem;
+    left: 0;
+    width: 100%;
+
+    &.hide {
+      display: none;
+    }
+
+    ul {
+      width: 100%;
+      > li {
+        position: relative;
+        z-index: 10;
+        background: #fff;
+        width: 100%;
+        border-bottom: 1px solid #dadada;
+
+        &.active:after {
+          content: "";
+          position: absolute;
+          right: 17*@rem;
+          top: 17*@rem;
+          height: 40*@rem;
+          width: 40*@rem;
+          background: url("../images/ok.svg") no-repeat center;
+          background-size: 40*@rem;
+        }
+
+
+        > a {
+          font-size: 24*@rem;
+          width: 100%;
+          display: block;
+          height: 80*@rem;
+          line-height: 80*@rem;
+          padding-left: 20*@rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+// 商品列表
+.gs-product-list {
+  ul {
+  }
+}
+.gs-product-item {
+  float: left;
+  width: 50%;
+  margin-top: 10*@rem;
+  padding: 10*@rem;
+
+  a {
+    background: #fff;
+    padding: 20*@rem;
+    width: 100%;
+    display: block;
+  }
+  .pic {
+    width: 100%;
+    img {
+      width: 280*@rem;
+      height: 280*@rem;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .tit {
+    height: 28*@rem;
+    line-height: 28*@rem;
+    word-break:keep-all;
+    white-space:nowrap;
+    .font-size(12);
+    margin-top: 8*@rem;
+    overflow: hidden;
+  }
+  .info {
+    position: relative;
+    margin-top: 4*@rem;
+    min-height: 50*@rem;
+    .price {
+      height: 50*@rem;
+      line-height: 50*@rem;
+      color: #f8601d;
+      .font-size(20);
+    }
+    .btn {
+      color: #fff;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 50*@rem;
+      line-height: 50*@rem;
+      width: 124*@rem;
+      text-align: center;
+      background: #ff9501;
+      border-radius: 3*@rem;
+    }
+  }
+}
+
+
+/*----------- E 凑单品主体部分 ------------*/

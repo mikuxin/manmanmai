@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/baicaijia.css"/>
+    <title>白菜价</title>
+</head>
+<body>
+    <!-- mtop 顶部栏和搜索框 -->
+    <div class="mtop">
+        <!-- mheader 顶部栏 -->
+        <header class="mheader">
+            <a href="index.html" class='f-left mh-back'><img src="../images/icback.svg" alt=""></a>
+            <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+            <h1 class='mh-title'>白菜价-淘宝内部券</h1>
+        </header>
+    </div>
+
+    <!-- mheadnav 导航可拖拽菜单栏 -->
+    <nav class="mheadnav">
+        <div class="nav-titles">
+            <!-- ul的外部容器 -->
+            <div class="ul-wapper" id="wapper">
+                <ul class="clearfix" id="navlist">
+                    <!--<li class="active"><a href="#">热销</a></li>-->
+                    <!--<li><a href="#">热销</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="nav-searchbtn"></div>
+    </nav>
+    <script type="text/html" id="headNavTemp">
+        {{ each result as value i }}
+            <li titleId='{{value.titleId}}'><a href="javascript:;" class="tab-item">{{value.title}}</a></li>
+        {{ /each }}
+    </script>
+
+    <!-- 产品列表 -->
+    <section class="bcproducts-list">
+        <ul id="bcproductsUL">
+            <!--<li class="bc-products-item">-->
+                <!--<div class="item-left">-->
+                    <!--<img src="../images/baicaiproduct.jpg" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="item-right">-->
+                    <!--<div class="info">-->
+                        <!--<div class="title">-->
+                            <!--<span class=\"b\">[包邮]</span>双十一红包 今日开启-->
+                        <!--</div>-->
+                        <!--<div class="price">-->
+                            <!--<em>¥</em>0.0<del>¥0</del>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="bottom">-->
+                        <!--&lt;!&ndash; 优惠券进度条 &ndash;&gt;-->
+                        <!--<div class="bar clearfix">-->
+                            <!--<a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558" class="goquan" target="_blank"></a>-->
+                            <!--<i>-->
+                                <!--<em style="width:2%;"></em>-->
+                                <!--<span>2%</span>-->
+                            <!--</i>-->
+                            <!--<b>已领112张</b>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; 领取优惠券 &ndash;&gt;-->
+                        <!--<div class="getcount">-->
+                            <!--<a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558" target="_blank">点此领10元优惠券</a>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;  定位下单按钮 &ndash;&gt;-->
+                        <!--<div class="buyproduct">-->
+                            <!--<a biz-itemid=\"56297410_8818824_54778388\" isconvert=\"1\" href=\"http://s.click.taobao.com/3HlIdQx\" target=\"_blank\">下单链接</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </section>
+    <script type="text/html" id="productsTemp">
+        {{ each result as value i }}
+        <li class="bc-products-item">
+            <div class="item-left">
+                {{#value.productImg}}
+            </div>
+            <div class="item-right">
+                <div class="info">
+                    <div class="title">
+                        {{#value.productName}}
+                    </div>
+                    <div class="price">
+                        {{#value.productPrice}}
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <!-- 优惠券进度条 -->
+                    {{#value.productCouponRemain}}
+                    <!-- 领取优惠券 -->
+                    <div class="getcount">
+                        {{#value.productCoupon}}
+                    </div>
+                    <!--  定位下单按钮 -->
+                    <div class="buyproduct">
+                        <a biz-itemid=\"56297410_8818824_54778388\" isconvert=\"1\" href=\"http://s.click.taobao.com/3HlIdQx\" target=\"_blank\">下单链接</a>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        {{ /each }}
+    </script>
+
+
+    <!-- mfooter 底部 -->
+    <footer class='mfooter'>
+        <div class="mft-bts clearfix">
+            <a href='javascript:;' class="bt-login">登录</a>
+            <a href='javascript:;' class="bt-register">注册</a>
+            <a href='javascript:window.scrollTo(0,0);' class="bt-totop">
+                <img src="../images/top.jpg" alt="回到顶部">回到顶部
+            </a>
+        </div>
+        <!-- 底部信息 -->
+        <div class='mft-msg'>
+            <p>
+                <a href="javascript:;" style='color:red'>手机APP下载</a>
+                <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+                <a href="javascript:;">--掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src='../lib/art/template.js'></script>
+    <script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+    <script src="../lib/iscroll/iscroll.js"></script>
+    <script src='../js/common/Route.js'></script>
+    <script src='../js/common/tools.js'></script>
+    <script src="../js/baicaijia.js"></script>
+</body>
+</html>

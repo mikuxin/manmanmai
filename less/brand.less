@@ -1,0 +1,63 @@
+@import "px2rem";
+
+/* 公共模板重定制 */
+.mpro-list-item .mitem-info {
+  position: relative;
+  .mall {
+    line-height: 30*@rem;
+    height: 30*@rem;
+  }
+  .comment {
+    float: left;
+    line-height: 30*@rem;
+    height: 30*@rem;
+  }
+  .stars {
+    position: absolute;
+    bottom: 40*@rem;
+    right: 0;
+    width: 180*@rem;
+    height: 36*@rem;
+    background: url("../images/star.svg") repeat;
+    background-size: 36*@rem 36*@rem;
+  }
+}
+
+/* ----------- S 最新评论 --------------*/
+.product-newcomment {
+  .mpro-list-item {
+    float: none;
+    background: #fff;
+    a {
+      padding-bottom: 0;
+    }
+  }
+
+  .mpingjia {
+    background: #fff;
+    padding: 10*@rem;
+    .pj-list-item {
+      float: none;
+      padding: 0;
+      padding: 30*@rem;
+      border-radius: 10*@rem;
+      background: #f8f8f8;
+      position: relative;
+      .tit {
+        .name {
+          color: #000;
+        }
+      }
+      .stars {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 20*@rem;
+        width: 180*@rem;
+        height: 36*@rem;
+        background: url("../images/star.svg") repeat;
+        background-size: 36*@rem 36*@rem;
+      }
+    }
+  }
+
+}

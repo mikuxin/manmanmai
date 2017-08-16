@@ -1,0 +1,26 @@
+/*-------------- S site-nav 商城导航 -------------- */
+.site-nav {
+  width: 7.9998rem;
+  margin: 0.26666rem auto;
+}
+.site-nav .link a {
+  display: inline-block;
+  float: left;
+  padding: 0.26666rem 0.213328rem;
+  border: 1px solid #bfbfbf;
+  margin: 0 0 0.13333rem 0.13333rem;
+  font-size: 16px;
+  line-height: 0.426656rem;
+}
+[data-dpr='2'] .site-nav .link a {
+  font-size: 32px;
+}
+[data-dpr="3"] .site-nav .link a {
+  font-size: 48px;
+}
+.site-nav .link a img {
+  width: 0.426656rem;
+  margin-right: 0.13333rem;
+  vertical-align: bottom;
+}
+/*-------------- E site-nav 商城导航 -------------- */

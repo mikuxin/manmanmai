@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <title>分类标题</title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -->
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="index.html" class='f-left mh-logo' ><img  src="../images/header_logo.png" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+    </header>
+    <!-- minput 顶部搜索框 -->
+    <div class="minput">
+        <div class="minput-inp">
+            <input class='inp' type="text" placeholder='请输入你想比价的商品'>
+        </div>
+        <div class="input-bt">
+            <input class='bt' type="button" value='搜索'>
+        </div>
+    </div>
+</div>
+
+<main class="brandTitle">
+    <!-- 3级导航菜单 -->
+    <div class='mdaohang'>
+        <ul class='clearfix'>
+            <li><a href="index.html">首页 > </a></li>
+            <li><a href="category.html">全部分类 > </a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!-- 标题栏 -->
+        <div class="brand-tit">热门品牌排行</div>
+        <!-- 排行内容 -->
+        <div class='brand-con' id="brand-con">
+
+        </div>
+    </div>
+
+    <script type="text/html" id="brandTitleTemp">
+        <ul class='mbrand-list clearfix'>
+            {{ each result as value i }}
+                <li><a href="brand.html?categoryId={{value.categoryId}}&brandTitleId={{value.brandTitleId}}"><span class='name'>{{ value.brandTitle }}</span><span class='micon micon-xiangxiajiantou'></span></a></li>
+            {{ /each }}
+        </ul>
+    </script>
+</main>
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:window.scrollTo(0,0);' class="bt-totop">
+            <img src="../images/top.jpg" alt="回到顶部">回到顶部
+        </a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p>
+            <a href="javascript:;" style='color:red'>手机APP下载</a>
+            <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+            <a href="javascript:;">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script src='../lib/art/template.js'></script>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../js/common/Route.js'></script>
+<script src='../js/common/tools.js'></script>
+<script src="../js/brandTitle.js"></script>
+</body>
+</html>

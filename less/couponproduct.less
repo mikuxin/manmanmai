@@ -1,0 +1,89 @@
+@import "px2rem";
+
+/*------------- 头部样式重定制 -------------*/
+.mtop .mheader {
+  background: #f4483e;
+}
+
+
+
+/*------------- S 优惠券商品列表 ------------ */
+.conponproduct-main {
+  // 展示性文字
+  .show {
+    background: #fff;
+    text-align: center;
+    .font-size(12);
+    height: 64*@rem;
+    line-height: 64*@rem;
+    color: #999;
+  }
+
+
+  .products-list {
+
+    .product-item {
+      margin-top: 8*@rem;
+      background: #fff;
+      min-height: 240*@rem;
+      padding: 20*@rem 0;
+      padding-right: 60*@rem;
+      position: relative;
+
+      // 右边的箭头利用伪元素添加的
+      &:before {
+        content: '';
+        height: 100%;
+        width: 60*@rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url("../images/right.svg") center no-repeat;
+        background-size: 40*@rem;
+      }
+
+      > a {
+        display: block;
+        width: 100%;
+      }
+
+      .leftpic {
+        float: left;
+        width: 240*@rem;
+        min-height: 240*@rem;
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 200*@rem;
+        }
+      }
+
+      .rightinfo {
+        overflow: hidden;
+
+        .tit {
+          > .name {
+            .font-size(14);
+            font-weight: normal;
+            line-height: 40*@rem;
+          }
+
+          > .price{
+            .font-size(14);
+            font-weight: 600;
+          }
+
+        }
+
+        .time {
+          margin-top: 24*@rem;
+          color: #EE7700;
+        }
+      }
+
+    }
+  }
+}
+
+
+/*------------- E 优惠券商品列表 ------------ */

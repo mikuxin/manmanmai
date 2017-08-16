@@ -1,0 +1,80 @@
+/*------------- 头部样式重定制 -------------*/
+.mtop .mheader {
+  background: #f4483e;
+}
+/*------------- S 优惠券商品列表 ------------ */
+.conponproduct-main .show {
+  background: #fff;
+  text-align: center;
+  font-size: 12px;
+  height: 0.853312rem;
+  line-height: 0.853312rem;
+  color: #999;
+}
+[data-dpr='2'] .conponproduct-main .show {
+  font-size: 24px;
+}
+[data-dpr="3"] .conponproduct-main .show {
+  font-size: 36px;
+}
+.conponproduct-main .products-list .product-item {
+  margin-top: 0.106664rem;
+  background: #fff;
+  min-height: 3.19992rem;
+  padding: 0.26666rem 0;
+  padding-right: 0.79998rem;
+  position: relative;
+}
+.conponproduct-main .products-list .product-item:before {
+  content: '';
+  height: 100%;
+  width: 0.79998rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../images/right.svg") center no-repeat;
+  background-size: 0.53332rem;
+}
+.conponproduct-main .products-list .product-item > a {
+  display: block;
+  width: 100%;
+}
+.conponproduct-main .products-list .product-item .leftpic {
+  float: left;
+  width: 3.19992rem;
+  min-height: 3.19992rem;
+}
+.conponproduct-main .products-list .product-item .leftpic img {
+  display: block;
+  margin: 0 auto;
+  width: 2.6666rem;
+}
+.conponproduct-main .products-list .product-item .rightinfo {
+  overflow: hidden;
+}
+.conponproduct-main .products-list .product-item .rightinfo .tit > .name {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 0.53332rem;
+}
+[data-dpr='2'] .conponproduct-main .products-list .product-item .rightinfo .tit > .name {
+  font-size: 28px;
+}
+[data-dpr="3"] .conponproduct-main .products-list .product-item .rightinfo .tit > .name {
+  font-size: 42px;
+}
+.conponproduct-main .products-list .product-item .rightinfo .tit > .price {
+  font-size: 14px;
+  font-weight: 600;
+}
+[data-dpr='2'] .conponproduct-main .products-list .product-item .rightinfo .tit > .price {
+  font-size: 28px;
+}
+[data-dpr="3"] .conponproduct-main .products-list .product-item .rightinfo .tit > .price {
+  font-size: 42px;
+}
+.conponproduct-main .products-list .product-item .rightinfo .time {
+  margin-top: 0.319992rem;
+  color: #EE7700;
+}
+/*------------- E 优惠券商品列表 ------------ */

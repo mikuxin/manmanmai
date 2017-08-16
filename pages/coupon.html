@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/coupon.css"/>
+    <title>优惠券</title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -->
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="index.html" class='f-left mh-back'><img src="../images/icback.svg" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+        <h1 class='mh-title'>优惠券</h1>
+    </header>
+</div>
+
+
+<!-- 优惠券列表 -->
+<main class="coupon">
+    <ul class="clearfix" id="couponUL">
+        <!--<li>-->
+            <!--<a href="couponproduct.html">-->
+                <!--<img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt=""/>-->
+                <!--<p>肯德基</p>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+</main>
+<script type="text/html" id="couponTemp">
+    {{ each result as value i }}
+    <li>
+        <a href="{{value.couponLink}}?couponId={{value.couponId}}">
+            <img src="{{value.couponImg}}" alt=""/>
+            <p>{{value.couponTitle}}</p>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+
+
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:window.scrollTo(0,0);' class="bt-totop">
+            <img src="../images/top.jpg" alt="回到顶部">回到顶部
+        </a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p>
+            <a href="javascript:;" style='color:red'>手机APP下载</a>
+            <a href="javascript:;" style='color:black'>慢慢买手机版</a>
+            <a href="javascript:;">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src='../lib/art/template.js'></script>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../js/common/Route.js'></script>
+<script src='../js/common/tools.js'></script>
+<script src="../js/coupon.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='../lib/flexible/flexible.js'></script>
+    <script src='../lib/flexible/flexible_css.js'></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/brand.css"/>
+    <title>全部品牌分类</title>
+</head>
+<body>
+<!-- mtop 顶部栏和搜索框 -->
+<div class="mtop">
+    <!-- mheader 顶部栏 -->
+    <header class="mheader">
+        <a href="index.html" class='f-left mh-logo' ><img  src="../images/header_logo.png" alt=""></a>
+        <a href="javascript:;" class='f-right mh-app'><img src="../images/header_app.png" alt=""></a>
+    </header>
+    <!-- minput 顶部搜索框 -->
+    <div class="minput">
+        <div class="minput-inp">
+            <input class='inp' type="text" placeholder='请输入你想比价的商品'>
+        </div>
+        <div class="input-bt">
+            <input class='bt' type="button" value='搜索'>
+        </div>
+    </div>
+    <!-- 3级导航菜单 -->
+    <nav class='mdaohang'>
+        <ul class='clearfix'>
+            <li><a href="index.html">首页 > </a></li>
+            <li><a href="category.html">全部分类 > </a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="mbody">
+    <!-- 品牌大全 -->
+    <div class="brandall">
+        <!-- 标题栏 -->
+        <div class="brand-tit">十大品牌哪个牌子好</div>
+        <div class='brand-distop'>
+            <ul class='mbrand-list clearfix' id="mbrand-list">
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/html" id="brandTemp">
+        {{ each result as value i }}
+        <li><a href="productlist.html?categoryid={{value.categoryId}}&pageid=1">
+            <span class='f-left num'>{{ i+1 }}</span>
+            <span class='f-right micon micon-xiangyoujiantou'></span>
+            <div class='info'>
+                <p class='tit'>{{ value.brandName }}</p>
+                <p class='sell'>{{ value.brandInfo }}</p>
+            </div>
+        </a></li>
+        {{ /each }}
+    </script>
+
+
+    <!-- 产品销量排行 -->
+    <div class="product-topsell">
+        <!-- 标题栏 -->
+        <div class="brand-tit">热销产品销量排行</div>
+        <!-- mproduct 产品模板  productlist 产品列表 -->
+        <section class="mproduct productlist">
+            <!-- 产品展示列表 -->
+            <div class="mpro-list">
+                <ul class='clearfix' id="productListUL">
+
+                </ul>
+            </div>
+        </section>
+        <script type="text/html" id="productTemp">
+            {{ each result as value i }}
+                <li class='mpro-list-item'>
+                    <a href="product.html?productid={{value.productId}}&categoryid={{value.categoryId}}">
+                        <div class="mitem-left">
+                            {{#value.productImg}}
+                        </div>
+                        <div class="mitem-info">
+                            <div class="tit">{{value.productName}}</div>
+                            <div class='price'>{{value.productPrice}}</div>
+                            <div class="other clearfix">
+                                <span class='mall'>{{value.productQuote}}</span><span class='comment'>{{value.productCom}}</span>
+                            </div>
+                            <div class="stars">
+                                <em></em>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            {{ /each }}
+        </script>
+    </div>
+    <!-- 平板电视最新评论 -->
+    <div class="product-newcomment">
+        <!-- 标题栏 -->
+        <div class="brand-tit">热销产品最新评论</div>
+
+        <div class="comments" id="comments">
+
+
+        </div>
+
+    </div>
+
+    <script type="text/html" id="commentTemp">
+        {{ each result as value i }}
+        <div class="comment-item">
+            <div class='mpro-list-item'>
+                <a href="product.html?productid={{value.productId}}&categoryid={{value.categoryId}}">
+                    <div class="mitem-left">
+                        {{#productImg}}
+                    </div>
+                    <div class="mitem-info">
+                        <div class="tit">{{productName}}</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 评价 -->
+            <section class='mpingjia'>
+                <div class='pj-list-item'>
+                    <div class="tit clearfix">
+                        <span class="name w50 f-left">{{value.comName}}:<em class="stars"></em></span>
+                        <span class='date w50 f-right'>{{value.comTime}}</span>
+                        <span class='mall w50 f-right'>{{value.comFrom}}</span>
+                    </div>
+                    <div class='info'>
+                        {{value.comContent}}
+                    </div>
+                </div>
+            </section>
+        </div>
+        {{ /each }}
+    </script>
+</div>
+
+<!-- mfooter 底部 -->
+<footer class='mfooter'>
+    <div class="mft-bts clearfix">
+        <a href='javascript:;' class="bt-login">登录</a>
+        <a href='javascript:;' class="bt-register">注册</a>
+        <a href='javascript:window.scrollTo(0,0);' class="bt-totop"><img src="../images/top.jpg" alt="回到顶部">回到顶部</a>
+    </div>
+    <!-- 底部信息 -->
+    <div class='mft-msg'>
+        <p><a href="javascript:;" style='color:red'>手机APP下载</a><a href="javascript:;" style='color:black'>慢慢买手机版</a><a href="javascript:;">--掌上比价平台</a></p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script src='../lib/art/template.js'></script>
+<script src='../lib/jquery/jquery-1.12.0.min.js'></script>
+<script src='../js/common/Route.js'></script>
+<script src='../js/common/tools.js'></script>
+<script src="../js/brand.js"></script>
+</body>
+</html>

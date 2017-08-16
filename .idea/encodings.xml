@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/baicaijia.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/couponproduct.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/px2rem.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/baicaijia.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/brandTitle.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/coupon.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/couponproduct.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/gsproduct.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/sitenav.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/baicaijia.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/coupon.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/couponproduct.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/gsproduct.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/sitenav.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/less/variable.less" charset="UTF-8" />
+  </component>
+</project>
